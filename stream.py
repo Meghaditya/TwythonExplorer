@@ -13,7 +13,8 @@ class MyStreamer(TwythonStreamer):
         print(status_code, data)
 
 # Requires Authentication as of Twitter API v1.1
-(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET) = twitter_credential_prompt()
+(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET) 
+			= twitter_credential_prompt()
 stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 stream.statuses.filter(track='twitter')
