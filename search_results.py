@@ -17,7 +17,9 @@ except TwythonError as e:
 for tweet in search_results['statuses']:
     if (tweet['lang'] == 'en') :
         print('Tweet from @%s Date: %s' % (tweet['user']['screen_name'].encode('utf-8'),tweet['created_at']))
-        print(tweet['text'].encode('utf-8'), '\n')
+        print(tweet['text'], '\n')
+        print(tweet['source'], '\n')
     else :
-        print('Tweet from @%s Date: %s' % (tweet['user']['screen_name'].encode('utf-8'),tweet['created_at']))
-        print(tweet['lang'], '\n')
+        # print('Tweet from @%s Date: %s' % (tweet['user']['screen_name'].encode('utf-8'),tweet['created_at']))
+        # print(tweet['lang'], '\n')
+        print('---Other language ... skipping---')
